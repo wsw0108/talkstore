@@ -3,9 +3,9 @@
 var path = require('path');
 
 // Reset all styles in the store
-var grainstore = require('../lib/grainstore');
+var talkstore = require('../lib/talkstore');
 
-var redis = require('redis')
+var redis = require('redis');
 
 function usage(me, exitcode) {
   console.log("Usage: " + me + " [--convert] <target_mapnik_version>");
@@ -15,11 +15,11 @@ function usage(me, exitcode) {
 var doConvert = false;
 var MAPNIK_VERSION;
 
-var node_path = process.argv.shift(); 
-var script_path = process.argv.shift(); 
+var node_path = process.argv.shift();
+var script_path = process.argv.shift();
 var me = path.basename(script_path);
 var arg;
-while ( arg = process.argv.shift() ) {
+while ( ( arg = process.argv.shift() ) ) {
   if ( arg == '--convert' ) {
     doConvert = true;
   } else if ( ! MAPNIK_VERSION ) {
@@ -36,7 +36,7 @@ var REDIS_PORT = 6379; // TODO: make a command line parameter
 
 var dbnum = 0;
 
-var mml_store = new grainstore.MMLStore({port:REDIS_PORT}, {mapnik_version:MAPNIK_VERSION});
+var mml_store = new talkstore.MMLStore({port:REDIS_PORT}, {mapnik_version:MAPNIK_VERSION});
 
 var failures = [];
 
@@ -53,14 +53,14 @@ client.on('connect', function() {
         //console.warn("Key " + k + " is EXTENDED, skipping");
         processNext();
         return;
-      } 
+      }
 
       var params = RegExp(/map_style\|(.*)\|(.*)/).exec(k);
       if ( ! params ) {
         console.warn("Key " + k + " is INVALID, skipping");
         processNext();
         return;
-      } 
+      }
       var db = params[1];
       var tab = params[2];
       var out = 'map_style|' + db + '|' + tab + ': ';

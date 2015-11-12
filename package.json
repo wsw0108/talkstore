@@ -1,40 +1,40 @@
 {
-    "name": "grainstore",
-    "version": "1.1.1",
-    "main": "./lib/grainstore/index.js",
-    "description": "Stores map styles and generates postgis friendly MML & XML for Mapnik",
-    "keywords": [
-      "cartodb"
-    ],
-    "url": "https://github.com/CartoDB/grainstore",
-    "licenses": [{
-        "type": "BSD",
-        "url": "https://github.com/CartoDB/grainstore/blob/master/LICENCE"
-    }],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/CartoDB/grainstore.git"
-    },
-    "author": "Vizzuality <contact@vizzuality.com> (http://vizzuality.com)",
-    "contributors": [
-      "Simon Tokumine <si@tinypla.net>",
-      "Sandro Santilli <strk@vizzuality.com>"
-    ],
-    "dependencies": {
-        "carto": "https://github.com/CartoDB/carto/tarball/0.9.5-cdb2",
-        "millstone": "0.6.14",
-        "underscore": "~1.6.0",
-        "semver": "~5.0.3"
-    },
-    "devDependencies": {
-        "step": "~0.0.5",
-        "mocha": "~1.14.0",
-        "libxmljs": "~0.8.1"
-    },
-    "scripts": {
-        "test": "make test"
-    },
-    "engines": {
-        "node": ">= 0.4.0"
-    }
+  "name": "talkstore",
+  "version": "1.1.1",
+  "main": "./lib/talkstore/index.js",
+  "description": "Stores map styles and generates maptalks friendly MML & XML for Mapnik",
+  "keywords": [
+    "maptalks"
+  ],
+  "url": "https://github.com/wsw0108/talkstore",
+  "licenses": [{
+    "type": "BSD",
+    "url": "https://github.com/wsw0108/talkstore/blob/master/LICENCE"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wsw0108/talkstore.git"
+  },
+  "author": "wsw0108 <wangshiwei@maptalks.org> (http://maptalks.org)",
+  "contributors": [
+    "Simon Tokumine <si@tinypla.net>",
+    "Sandro Santilli <strk@vizzuality.com>"
+  ],
+  "dependencies": {
+    "carto": "https://github.com/CartoDB/carto/tarball/0.9.5-cdb2",
+    "millstone": "0.6.14",
+    "underscore": "~1.6.0",
+    "semver": "~5.0.3"
+  },
+  "devDependencies": {
+    "step": "~0.0.5",
+    "mocha": "~1.14.0",
+    "libxmljs": "~0.8.1"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  }
 }

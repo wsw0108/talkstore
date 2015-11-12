@@ -1,10 +1,10 @@
 var assert     = require('assert');
-var grainstore = require('../lib/grainstore');
+var talkstore = require('../lib/talkstore');
 
-suite('grainstore', function() {
+suite('talkstore', function() {
 
   test('version', function() {
-    var version = grainstore.version();
+    var version = talkstore.version();
     assert.equal(typeof(version), 'string');
     assert.equal(version, require('../package.json').version);
   });
