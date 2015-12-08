@@ -27,21 +27,14 @@ suite('mml_store', function() {
     var mml_store = new talkstore.MMLStore();
     assert.throws(function(){
       mml_store.mml_builder();
-    }, Error, "Options must include dbname and query");
+    }, Error, "Options must include query and style");
   });
 
   test('can create new mml_builders with normal ops', function(done) {
     var mml_store = new talkstore.MMLStore();
     var query = {
-      layer: 'whatever',
-      filter: 'dummy'
-    };
-    mml_store.mml_builder({dbname: 'my_database', query: query, style: DEFAULT_POINT_STYLE}).toXML(done);
-  });
-
-  test('can create new mml_builders with normal ops and sql', function(done) {
-    var mml_store = new talkstore.MMLStore();
-    var query = {
+      engine_home: 'home',
+      dbname: 'dbname',
       layer: 'whatever',
       filter: 'dummy'
     };
