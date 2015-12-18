@@ -130,9 +130,9 @@ suite('mml_builder multilayer', function() {
     var style1 = "#layer1 { marker-width:4; }";
     var query0 = queryPoint;
     var query1 = queryLine;
-    var style_version0 = "2.0.2";
-    var style_version1 = "2.1.0";
-    var mml_store = new talkstore.MMLStore({mapnik_version: '2.1.0'});
+    var style_version0 = "3.0.0";
+    var style_version1 = "3.0.0";
+    var mml_store = new talkstore.MMLStore({mapnik_version: '3.0.0'});
 
     step(
       function initBuilder() {
@@ -172,7 +172,7 @@ suite('mml_builder multilayer', function() {
         var style0 = xmlDoc.get("Style[@name='layer0']");
         assert.ok(style0, "Style for layer0 not found in XML");
         var style0txt = style0.toString();
-        var re = /MarkersSymbolizer width="6"/;
+        var re = /MarkersSymbolizer width="3"/;
         assert.ok(re.test(style0txt), 'Expected ' + re + ' -- got ' + style0txt);
 
         var style1 = xmlDoc.get("Style[@name='layer1']");

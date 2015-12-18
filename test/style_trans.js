@@ -4,7 +4,7 @@ var StyleTrans = require('../lib/talkstore/style_trans.js');
 
 var t = new StyleTrans();
 
-suite('style_trans', function() {
+suite.skip('style_trans', function() {
 
   //suiteSetup(function() { });
 
