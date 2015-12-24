@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "carto": "^0.15.3",
+    "mapnik-reference": "https://github.com/mapnik/mapnik-reference/tarball/master",
     "millstone": "https://github.com/wsw0108/millstone/tarball/v0.6.16-maptalks1",
     "semver": "~5.0.3",
     "underscore": "~1.6.0"
