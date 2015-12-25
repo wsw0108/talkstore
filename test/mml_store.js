@@ -33,7 +33,6 @@ suite('mml_store', function() {
   test('can create new mml_builders with normal ops', function(done) {
     var mml_store = new talkstore.MMLStore();
     var query = {
-      engine_home: 'home',
       dbname: 'dbname',
       layer: 'whatever',
       filter: 'dummy'

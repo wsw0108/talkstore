@@ -27,7 +27,6 @@ var DEFAULT_POINT_STYLE = [
 ].join('');
 
 var SAMPLE_QUERY = {
-  engine_home: '/path/to/engine/home',
   dbname: 'my_database',
   layer: 'whatever',
   filter: 'dummy'
@@ -114,7 +113,6 @@ suite('mml_builder', function() {
   test('can force plain base mml with query ops', function(done) {
     var mml_store = new talkstore.MMLStore();
     var q = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 'my_table',
       filter: 'dummy'
@@ -124,7 +122,6 @@ suite('mml_builder', function() {
     );
     var baseMML = mml_builder.baseMML();
     assert.equal(baseMML.Layer[0].id, 'layer0');
-    assert.equal(baseMML.Layer[0].Datasource.engine_home, q.engine_home);
     assert.equal(baseMML.Layer[0].Datasource.dbname, q.dbname);
     assert.equal(baseMML.Layer[0].Datasource.layer, q.layer);
     assert.equal(baseMML.Layer[0].Datasource.filter, q.filter);
@@ -142,7 +139,6 @@ suite('mml_builder', function() {
   test('can render XML from full mml with style', function(done) {
     var mml_store = new talkstore.MMLStore();
     var q = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 'my_table',
       filter: 'dummy'
@@ -198,7 +194,6 @@ suite('mml_builder', function() {
   test('retrieves a dynamic style should return XML with dynamic style', function(done) {
     var mml_store = new talkstore.MMLStore();
     var q = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 'my_tablez',
       filter: 'dummy'
@@ -251,13 +246,11 @@ suite('mml_builder', function() {
   test('quotes in CartoCSS are accepted', function(done) {
     var mml_store = new talkstore.MMLStore();
     var q1 = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 't',
       filter: 'dummy1'
     };
     var q2 = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 't',
       filter: 'dummy2'
@@ -287,7 +280,6 @@ suite('mml_builder', function() {
   test('base style and custom style keys do not affect each other', function(done) {
     var mml_store = new talkstore.MMLStore();
     var q = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 'tab',
       filter: 'dummy'
@@ -431,7 +423,6 @@ suite('mml_builder', function() {
       var xml_re = style_spec.xml_re;
 
       var q = {
-        engine_home: '/path/to/engine/home',
         dbname: 'dbname',
         layer: 'tab',
         filter: 'dummy'
@@ -498,7 +489,6 @@ suite('mml_builder', function() {
     };
 
     var q1 = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 't1',
       filter: 'dummy'
@@ -515,7 +505,6 @@ suite('mml_builder', function() {
     });
 
     var q2 = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 't1',
       filter: 'dummy'
@@ -563,7 +552,6 @@ suite('mml_builder', function() {
     style += "#t[b=1.2e+3] { polygon-fill: #000000; }";
     style += "#t[c=2.3e4] { polygon-fill: #000000; }";
     var q = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 't',
       filter: 'dummy'
@@ -624,7 +612,6 @@ suite('mml_builder', function() {
                throw err;
              }
              var q = {
-               engine_home: '/path/to/engine/home',
                dbname: 'dbname',
                layer: 't',
                filter: 'dummy'

@@ -1,6 +1,6 @@
 {
   "name": "talkstore",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "main": "./lib/talkstore/index.js",
   "description": "Stores map styles and generates maptalks friendly MML & XML for Mapnik",
   "keywords": [

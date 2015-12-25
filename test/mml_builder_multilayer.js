@@ -1,3 +1,4 @@
+
 var assert     = require('assert');
 var talkstore  = require('../lib/talkstore');
 var libxmljs   = require('libxmljs');
@@ -26,13 +27,11 @@ var DEFAULT_POINT_STYLE = [
 suite('mml_builder multilayer', function() {
 
   var queryPoint = {
-    engine_home: '/path/to/engine/home',
     dbname: 'dbname',
     layer: 'my_layer_0',
     filter: 'dummy'
   };
   var queryLine = {
-    engine_home: '/path/to/engine/home',
     dbname: 'dbname',
     layer: 'my_layer_1',
     filter: 'dummy'
@@ -319,7 +318,6 @@ suite('mml_builder multilayer', function() {
   test('Error out on malformed layer', function(done) {
     var mml_store = new talkstore.MMLStore({mapnik_version: '2.1.0'});
     var q = {
-      engine_home: '/path/to/engine/home',
       dbname: 'dbname',
       layer: 'whatever',
       filter: 'dummy'
