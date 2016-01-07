@@ -1,6 +1,6 @@
 {
   "name": "talkstore",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "main": "./lib/talkstore/index.js",
   "description": "Stores map styles and generates maptalks friendly MML & XML for Mapnik",
   "keywords": [
@@ -25,7 +25,7 @@
   "dependencies": {
     "carto": "^0.15.3",
     "mapnik-reference": "https://github.com/mapnik/mapnik-reference/tarball/master",
-    "millstone": "https://github.com/wsw0108/millstone/tarball/v0.6.16-maptalks1",
+    "millstone": "https://github.com/wsw0108/millstone/tarball/v0.6.16-maptalks2",
     "semver": "~5.0.3",
     "underscore": "~1.6.0"
   },
